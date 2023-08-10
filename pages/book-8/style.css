@@ -1,0 +1,476 @@
+/* RMIT University Vietnam
+  Course: COSC2430 Web Programming
+  Semester: 2023A
+  Assessment: Assignment 1
+  Author: Nguyen Trung Tin
+  ID: s3988418
+  Icon: https://fontawesome.com/icons
+  Font: https://fonts.google.com/
+  Info: https://www.wikipedia.org */
+html {
+  background-color: rgb(83, 95, 117);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+nav {
+  display: flex;
+  padding: 2% 6%;
+  align-items: center;
+  justify-content: space-between;
+}
+nav img {
+  width: 100px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.category a {
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: rgba(228, 5, 42, 255);
+  display: block;
+  margin: auto;
+  transition: 0.25s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.category h1 {
+  font-size: 26px;
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 30px;
+  font-size: 15px;
+  border-radius: 12px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover {
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
+}
+
+nav .fa-solid {
+  display: none;
+}
+
+/* -----------------------------main -----------------------------*/
+.main {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container {
+  width: 80%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.items-1,
+.items-2,
+.items-3,
+.items-4 {
+  background-color: #1d5d9b;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* -------------------item-1------------------- */
+.items-1 {
+  grid-area: 1/1/4/4;
+  background-image: url("../../image/Category of Books/Coming-of-Age and Realistic Fiction/The Fault in Our Stars .jpg");
+  border-radius: 5px;
+  background-size: cover;
+  overflow: hidden;
+}
+.items-1:hover {
+  margin: -3px;
+  transition: 0.5s;
+}
+/* -------------------item-2------------------- */
+.items-2 {
+  grid-area: 1/4/4/7;
+  background-color: transparent;
+}
+
+/* small-item */
+.small-container {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.small-item-1,
+.small-item-2,
+.small-item-3 {
+  background-color: #f4d160;
+  margin: 2% 0;
+  width: 100%;
+  height: 30%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.small-item-1:hover,
+.small-item-2:hover,
+.small-item-3:hover {
+  margin-top: 5%;
+  transition: 0.5s;
+}
+
+.small-item {
+  position: relative;
+  overflow: hidden;
+}
+.small-item img {
+  background-size: cover;
+}
+
+.small-item p {
+  margin: 0 10px;
+  position: absolute;
+  color: #fff;
+  padding: 20%;
+  background-color: #000000d0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(50%);
+  text-align: center;
+  margin: 0;
+  opacity: 0;
+}
+.small-item:hover p {
+  bottom: 50%;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+/* -------------------item-3------------------- */
+.items-3 {
+  grid-area: 1/7/4/9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.items-3:hover {
+  margin: 10px 0;
+  transition: 0.5s;
+}
+/* price */
+.item-3-price {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-weight: 600;
+  font-size: 50px;
+  cursor: pointer;
+}
+.item-3-price:hover {
+  font-size: 70px;
+  transition: 0.5s;
+}
+
+/* button in item-3 */
+.items-3-btn {
+  width: 80%;
+  height: 20%;
+  margin-top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+  color: #ffffff;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+.item-3-price p {
+  color: #000000d6;
+  font-size: 20px;
+  margin-top: 15%;
+}
+.fa-solid {
+  margin: 0 5px;
+}
+.items-3-btn:hover {
+  width: 90%; /*80%*/
+  height: 25%; /*20%*/
+  margin-top: 15%; /*25%*/
+  transition: 0.5s;
+  box-shadow: 5px 5px 0 #000;
+  font-size: 20px;
+}
+/* -------------------item-4------------------- */
+.items-4 {
+  grid-area: 4/1/6/9;
+  border-radius: 10px;
+  background-color: #fff;
+  display: block;
+  padding: 3%;
+}
+
+.items-4 h3 {
+  color: tomato;
+  font-size: 25px;
+}
+.items-4 p {
+  color: #777;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.items-4 .fa-solid {
+  color: tomato;
+  padding: 5px;
+}
+
+/* -----------------------------Footer----------------------------- */
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgba(228, 5, 42, 255);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+.footer {
+  margin-top: 0;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .items-1 {
+    grid-area: 1/1/6/8;
+  }
+  .items-3 {
+    grid-area: 6/1/8/9;
+    display: flex;
+    flex-direction: row;
+  }
+  .items-3-btn {
+    margin: 0 10px;
+    padding: 10%;
+  }
+  .items-3-btn:hover {
+    box-shadow: none;
+    margin-top: 0; /*25%*/
+  }
+  .items-3 p {
+    display: none;
+  }
+  .items-4 {
+    display: none;
+  }
+  .items-4 h3 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .items-4 p {
+    font-size: 10px;
+  }
+  .items-4 ul li {
+    font-size: 10px;
+  }
+  .items-2 {
+    display: none;
+  }
+  .text-box h1 {
+    font-size: 20px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: rgba(228, 5, 42, 255);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    z-index: 2;
+    text-align: left;
+    transition: 1s;
+  }
+  nav .fa-solid {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  .about .about_image img {
+    display: none;
+  }
+  .about {
+    width: 100%;
+    height: 80vh;
+  }
+  .about_tag {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .about .about_tag h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .about .about_tag p {
+    line-height: 22px;
+    width: 80%;
+    margin-bottom: 15px;
+  }
+  .about .about_tag .about_btn {
+    display: none;
+  }
+  .row {
+    flex-direction: column;
+  }
+
+  .category h1 {
+    font-size: 20px;
+  }
+  .category-btn {
+    width: 60%;
+  }
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .items-4 p {
+    font-size: 12px;
+  }
+  .items-4 h3 {
+    font-size: 17px;
+  }
+  .items-4 ul li {
+    font-size: 14px;
+  }
+}

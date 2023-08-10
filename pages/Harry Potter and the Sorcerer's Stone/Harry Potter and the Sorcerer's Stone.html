@@ -1,0 +1,171 @@
+<!-- RMIT University Vietnam
+  Course: COSC2430 Web Programming
+  Semester: 2023A
+  Assessment: Assignment 1
+  Author: Nguyen Trung Tin
+  ID: s3988418
+  Icon: https://fontawesome.com/icons
+  Font: https://fonts.google.com/
+  Info: https://www.wikipedia.org
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Harry Potter and the Sorcerer's Stone</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <video autoplay loop muted plays-inline class="back-video">
+      <source src="../../image/wallpaper.mp4" type="video/mp4" />
+    </video>
+    <section class="category">
+      <nav>
+        <a href="../../index.html "
+          ><img src="../../image/logo.png " alt="logo"
+        /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="../../index.html ">HOME</a></li>
+            <li><a href="../../pages/Sub-Category.html">CATEGORY</a></li>
+            <li><a href="../../pages/Sub-Category.html">BOOK DETAIL</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" id="navLinks" onclick="showMenu()"></i>
+      </nav>
+    </section>
+    <!-- main -->
+    <section class="main">
+      <div class="grid-container">
+        <!-- box-1 -->
+        <div class="items-1"></div>
+        <!-- box-2 -->
+        <div class="items-2">
+          <!-- small-item -->
+          <div class="small-container">
+            <div class="small-item-1 small-item">
+              <img
+                src="../../pages/Harry Potter and the Sorcerer's Stone/img for small-item/img 1 small-item.png"
+              />
+              <p>ENCHANTING</p>
+            </div>
+            <div class="small-item-2 small-item">
+              <img
+                src="../../pages/Harry Potter and the Sorcerer's Stone/img for small-item/img 2 small-item.png"
+              />
+              <p>MAGICAL</p>
+            </div>
+            <div class="small-item-3 small-item">
+              <img
+                src="../../pages/Harry Potter and the Sorcerer's Stone/img for small-item/img 3 small-item.png"
+              />
+              <p>ADVENTURE</p>
+            </div>
+          </div>
+        </div>
+        <!-- box-3 -->
+        <div class="items-3">
+          <div class="item-3-price">
+            $60
+            <p>.00</p>
+          </div>
+          <div class="items-3-btn">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <!-- box-4 -->
+        <div class="items-4">
+          <!-- book name -->
+          <h3>Harry Potter and the Sorcerer's Stone</h3>
+          <br />
+          <p>
+            "Harry Potter and the Sorcerer's Stone" by J.K. Rowling introduces
+            young wizard Harry to Hogwarts School of Witchcraft and Wizardry.
+            Amidst magical friendships, enchanted challenges, and the mystery of
+            the Sorcerer's Stone, Harry's journey unfolds, capturing hearts with
+            its captivating blend of fantasy, adventure, and the power of
+            friendship."
+          </p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-pen-nib"></i><strong>Author:</strong> J.K.
+              Rowling
+            </li>
+            <li>
+              <i class="fa-solid fa-mountain-sun"></i
+              ><strong>Genre:</strong> Fantasy, Young Adult
+            </li>
+            <li>
+              <i class="fa-solid fa-calendar-days"></i
+              ><strong>Publication Year:</strong> 1997
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- function -->
+    <script>
+      let navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0px";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

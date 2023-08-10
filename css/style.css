@@ -1,0 +1,397 @@
+/* RMIT University Vietnam
+  Course: COSC2430 Web Programming
+  Semester: 2023A
+  Assessment: Assignment 1
+  Author: Nguyen Trung Tin
+  ID: s3988418
+  Icon: https://fontawesome.com/icons
+  Font: https://fonts.google.com/
+  Info: https://www.wikipedia.org */
+/* rmit color: rgba(228, 5, 42, 255) */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  /* background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url(image/background.png); */
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5));
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  align-items: center;
+  justify-content: space-between;
+}
+nav img {
+  width: 100px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.category a {
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+}
+/* ----- */
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: rgba(228, 5, 42, 255);
+  display: block;
+  margin: auto;
+  transition: 0.25s;
+}
+
+/* -------------------------------- */
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.category h1 {
+  font-size: 26px;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 62px;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 30px;
+  font-size: 15px;
+  border-radius: 12px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover {
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
+}
+
+nav .fa-solid {
+  display: none;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .text-box h1 {
+    font-size: 20px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: rgba(228, 5, 42, 255);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    z-index: 2;
+    text-align: left;
+    transition: 1s;
+  }
+  nav .fa-solid {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+
+/*about*/
+.about {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about .about_image img {
+  width: 48vw;
+}
+.about_tag {
+  width: 48vw;
+}
+.about .about_tag h1 {
+  font-size: 50px;
+  position: relative;
+  bottom: 35px;
+}
+
+.about .about_tag p {
+  line-height: 22px;
+  width: 90%;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.about .about_tag .about_btn {
+  padding: 10px 20px;
+  background-color: rgba(228, 5, 42, 255);
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  top: 17px;
+}
+.about_btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.391) 0px 5px 15px;
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .about .about_image img {
+    display: none;
+  }
+  .about {
+    width: 100%;
+    height: 80vh;
+  }
+  .about_tag {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .about .about_tag h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .about .about_tag p {
+    line-height: 22px;
+    width: 80%;
+    margin-bottom: 15px;
+  }
+  .about .about_tag .about_btn {
+    display: none;
+  }
+}
+
+/* Category page */
+
+.category {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+.row {
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-around;
+}
+.ca-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.ca-col img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.ca-col:hover {
+  box-shadow: rgba(0, 0, 0, 0.391) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: 0.5s;
+}
+.layer:hover {
+  background: rgba(11, 6, 7, 0.879);
+}
+/* sroll up effect */
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+/* category-button */
+.category-btn {
+  margin: auto;
+  padding: 10px 10px;
+  text-align: center;
+  width: 50%;
+}
+.category-btn:hover {
+  border: #000 solid 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .category h1 {
+    font-size: 20px;
+  }
+  .category-btn {
+    width: 60%;
+  }
+}
+
+/* Footer */
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgba(228, 5, 42, 255);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
